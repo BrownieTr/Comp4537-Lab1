@@ -1,8 +1,3 @@
-// js/reader.js
-// ChatGPT was used as a coding assistant for this file and this assignment.
-
-"use strict";
-
 let lastRetrievedTime = null;
 let retrieveIntervalId = null;
 
@@ -52,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Retrieve every 2 seconds
     retrieveIntervalId = setInterval(renderNotes, 2000);
 
-    // Optional: also react to storage events (same browser, other tab)
+    // also react to storage events (same browser, other tab)
     window.addEventListener("storage", (e) => {
         if (e.key === STORAGE_KEY_NOTES) {
             renderNotes();

@@ -56,11 +56,8 @@ function createNoteUI(id, text, container) {
 
     note.attachEvents(
         (noteToRemove) => {
-            // Remove from DOM
             container.removeChild(wrapper);
-            // Remove from array
             notes = notes.filter(n => n.id !== noteToRemove.id);
-            // Save immediately on remove
             saveNotesToStorage(notes);
         },
         (noteChanged) => {
